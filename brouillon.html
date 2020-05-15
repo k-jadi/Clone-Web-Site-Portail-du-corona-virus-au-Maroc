@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="brouillon.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/ministeredelasante.png">
+    <title dir="rtl">البوابة الرسمية لفيروس كرونا المغرب</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Menu Haut Fixe -->
+        <div class="topmenu">
+            <p id='point_menu_deroulant' onclick="openMenu()"> <a href="#">Menu :::</a></p>
+            <p id='point_menu_deroulant2' onclick="fermer()"> <a href="#">::: CLOSE</a></p>
+            <ul id="menu_deroulant">
+                <li><a href="communiques.html">COMMUNIQUES</a></li>
+                <li><a href="scm.html">SITES CONSULTATION MEDICALE</a></li>
+                <li><a href="pdls.html">PROFESSIONNELS DE LA SANTE</a></li>
+                <li><a href="sc19.html">SITUATION COVID 19</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <!-- Le header -->
+        <header class="header">
+            <p><img src="images/ministeredelasante.png" alt=""></p>
+            <p>Le Portail Officiel du Coronavirus au Maroc</p>
+            <p dir="rtl">البوابة الرسمية لفيروس كرونا المغرب</p>
+            <p><img class="rdm" src="images/royaumedumaroc.png" alt=""></p>
+        </header>
+
+        <!--  Le menu de navigation -->
+        <nav class="menu_principal">
+            <ul id="menu_apparent">
+                <li>ACCEUIL</li>
+                <li><a href="communiques.html">COMMUNIQUES</a></li>
+                <li><a href="scm.html">SITES CONSULTATION MEDICALE</a></li>
+                <li><a href="pdls.html">PROFESSIONNELS DE LA SANTE</a></li>
+                <li><a href="sc19.html">SITUATION COVID 19</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- Section principale -->
+        <section class="main_container">
+            <!-- Element princial de la section -->
+            <div class="resultats">
+                <div id="heureetdate">
+                    <p><a href='http://www.ingenieursdumaroc.com'>16h00 07-05-2020</a></p>
+                </div>
+                <div class="chiffres">
+                    <div class="gd">
+                        <p>Guéris : <span id="gueris">2389</span></p>
+                        <p>Décès : <span id="deces">183</span></p>
+                    </div>
+                    <div class="confirmés">
+                        <p>5873<br>Confirmés</p>
+                    </div>
+                    <div class="exclus">
+                        <p>56143<br>Exclus</p>
+                    </div>
+                </div>
+                <div class="banniere_basse">
+                    <p><img src="images/banniere_basse.png" alt="banniere basse"></p>
+                </div>
+    
+            </div>
+            <!-- Aside Menu de la section -->
+            <div class="aside_menu">
+                <p><img src="images/aside_image_1.png" alt="aside image 1"></p>
+                <p><img src="images/aside_image_2.png" alt="aside image 2"></p>
+                <p><img src="images/aside_image_3.png" alt="aside image 3"></p>
+                <p><img src="images/aside_image_4.png" alt="aside image 4"></p>
+            </div>
+        </section>
+        <!-- La répartition par région -->
+        <div class="repartition">
+            <p>Répartition des cas par Région :</p>
+            <table class="table">
+                <tr>
+                    <th>Régions</th>
+                    <th>Nombre de cas confirmé​s en %</th>
+                </tr>
+                <tr>
+                    <td>Beni Mellal-Khénifra​​</td>
+                    <td class="acenter">1.76%</td>
+                </tr>
+                <tr>
+                    <td>Casa Settat</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Daraa-tafilalet</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Dakhla-Oued Ed Dahab</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Fès meknes</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Guelmim Oued Noun</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Laâyoune-Sakia El Hamra</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Marrakech Safi</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+                <tr>
+                    <td>Oriental</td>
+                    <td class="acenter">26.92%</td>
+                </tr>
+            </table>
+        </div>
+        
+
+    </div>
+    <script>
+        function openMenu () {
+            document.getElementById('point_menu_deroulant2').style.zIndex = '1';
+            document.getElementById('point_menu_deroulant2').style.opacity = '1';
+            document.getElementById('menu_deroulant').style.maxHeight = '210px';
+            document.body.style.pointerEvents = 'none';
+            document.getElementById('menu_deroulant').style.pointerEvents ='auto';
+            document.getElementById('point_menu_deroulant2').style.pointerEvents ='auto';
+        }
+
+        function fermer () {
+            document.getElementById('menu_deroulant').style.maxHeight = '0';
+            document.getElementById('point_menu_deroulant2').style.opacity = '0';
+            document.getElementById('point_menu_deroulant2').style.zIndex = '-1';
+            document.body.style.pointerEvents = 'auto';
+
+        }
+    </script>
+</body>
+</html>
